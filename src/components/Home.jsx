@@ -12,7 +12,7 @@ function Home() {
         <>
             <Navbar/>
             <h1>Hello from Home!</h1>
-            <h2> User id: {user}</h2>
+            <h2> Welcome user: {(user !== null && user !== undefined) ? user["user_id"] : ""}</h2>
         </>
     )
 }

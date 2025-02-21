@@ -24,10 +24,10 @@ function Login() {
             console.log("user unauthorized: ", res.status)
             return;
         }
-        console.log("csrf token: ", res.headers.get('x-csrf-token'));
-        console.log("cookie: " + res.headers.getSetCookie())
+        let csrfToken = res.headers.get('x-csrf-token');
         res = await res.json()
         let loggedInUser = res["user"]
+        loggedInUser["x-csrf-token"] = csrfToken
         console.log(loggedInUser)
         localStorage.setItem("user", JSON.stringify(loggedInUser));
         setUser(loggedInUser);
@@ -55,7 +55,6 @@ function Login() {
                     />
                 </div>
             </form>
-
             <button type="submit" onClick={(e) => onClickHandler(e)}>Submit!</button>
         </>
     )

@@ -1,7 +1,9 @@
 import {BrowserRouter, Route, Routes} from "react-router-dom";
-import Signup from "./components/Signup.jsx";
+import LoginGroup from "./components/LoginGroup.jsx";
 import Home from "./components/Home.jsx";
 import UserContextProvider from "./context/UserContextProvider.jsx";
+import Logout from "./components/Logout.jsx";
+import SignupGroup from "./components/SignupGroup.jsx";
 
 function App() {
     return (
@@ -9,7 +11,9 @@ function App() {
             <BrowserRouter>
                 <Routes>
                     <Route path="/home" element={<Home/>}/>
-                    <Route path="/signup" element={<Signup/>}/>
+                    <Route path="/login" element={<LoginGroup/>}/>
+                    <Route path="/logout" element={<Logout/>}/>
+                    <Route path='/signup' element={<SignupGroup/>}/>
                 </Routes>
             </BrowserRouter>
         </UserContextProvider>
