@@ -19,6 +19,8 @@ function Signup() {
             method: 'POST',
             credentials: "include",
             body: JSON.stringify({
+                "first_name": firstName,
+                "last_name": lastName,
                 "email": email,
                 "password": password,
             },)
@@ -46,7 +48,7 @@ function Signup() {
                         <input type='text'
                                placeholder='First Name'
                                autoComplete="first_name"
-                               value={email}
+                               value={firstName}
                                onChange={(e) => setFirstName(e.target.value)}
                         />
                     </div>
@@ -54,7 +56,7 @@ function Signup() {
                         <input type='text'
                                placeholder='Last Name'
                                autoComplete="last_name"
-                               value={email}
+                               value={lastName}
                                onChange={(e) => setLastName(e.target.value)}
                         />
                     </div>

@@ -11,8 +11,7 @@ function Home() {
     return (
         <>
             <Navbar/>
-            <h1>Hello from Home!</h1>
-            <h2> Welcome user: {(user !== null && user !== undefined) ? user["user_id"] : ""}</h2>
+            <h2> Welcome {(user !== null && user !== undefined) ? user["first_name"] + "!" : ""}</h2>
         </>
     )
 }

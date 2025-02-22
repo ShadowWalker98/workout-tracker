@@ -1,0 +1,46 @@
+
+.navbar {
+    background-color: #272727;
+    color: white;
+    height: 50px;
+}
+
+.navbar-routes-list {
+    list-style-type: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    text-underline: none;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+}
+
+/*.nav-link:hover {*/
+/*    color: #7b838e;*/
+/*}*/
+/*.nav-link:active {*/
+/*    color: #b2bcbc;*/
+/*}*/
+
+.nav-list-item {
+    padding: 14px 16px;
+}
+
+.nav-list-item:hover {
+    background-color: #858484;
+}
+
+.nav-list-item:active {
+    background-color: #636363;
+}
+
+body {
+    margin: 0;
+}
